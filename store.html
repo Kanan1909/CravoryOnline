@@ -680,33 +680,8 @@
       <!-- Add more shake items as needed -->
     </div>
   </div>
-
-  <script src="cart.js"></script>
-  <!-- <script src="searchengine.js"></script> -->
-  <script>
-    function searchItems() {
-        var input = document.getElementById('searchInput').value.toLowerCase();
-        var items = document.querySelectorAll('.item-details h2');
-        var found = false;
-        
-        items.forEach(function(item) {
-            var itemName = item.textContent.toLowerCase();
-            var parent = item.closest('.divi');
-            
-            if (itemName.includes(input)) {
-                parent.classList.remove('hidden');
-                // Scroll to the item
-                parent.scrollIntoView({ behavior: 'smooth' });
-                found = true;
-            } else {
-                parent.classList.add('hidden');  
-            }
-        });
-        if (!found) {
-          alert("Item is not found in the store.");
-        }
-   
-    }
-</script>
+<script src="store.js"></script>
+<script src="cart.js"></script>
+  
 </body>
 </html>

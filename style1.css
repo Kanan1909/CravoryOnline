@@ -14,21 +14,69 @@ header {
 
 .navbar {
   display: flex;
+  width: 100vw;
   justify-content: space-between;
   align-items: center;
-  height: 20px;
+  height: 10px;
   /* height: 60px;
   width: 100vw; */
   font-size: 23px;
   margin-left: 10px;
   /* margin-top: 0px; */
-  /* position: absolute; */
+  position: sticky;
 
 }
 
 .navbar li a:hover {
   background-color: black;
 
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin-left: 10px;
+}
+
+/* .navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: rgba(194, 53, 14, 0.829);
+} */
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #000000;
+  color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
 .cartlogo {
@@ -52,6 +100,7 @@ header {
   /* background-clip: url('images\background\pexels-olha-ruskykh-6280333 (Original).mp4'); */
   background-repeat: no-repeat;
   background-size: cover;
+  
   /* opacity: 70%; */
   /* margin-top: 40px; */
 
@@ -249,17 +298,17 @@ text-align: center;
 
 .category p {
   font-size: 25px;
-  /* padding-bottom: 20px;
-  margin-bottom: 20px; */
+  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 
-.footDiv {
+/* .footDiv {
   border: 2px solid black;
   background-color: rgba(175, 105, 77, 0.638);
 }
 
 .footer {
-  /* border: 2px solid black; */
+  border: 2px solid black;
   height: 300px;
   width: 300px;
   display: flex;
@@ -279,4 +328,68 @@ text-align: center;
   margin-top: 50px;
   width: 250px;
   height: 200px;
+} */
+
+
+
+
+
+.detail {
+  background-color: black;
+  height: 400px;
+  /* display: flex; */
+}
+
+.detail {
+  /* margin: 0 150px; */
+  /* height: 100%; */
+  display: flex;
+  justify-content: space-around;
+  padding-top: 50px;
+}
+
+.detail div{
+  width: 230px;
+}
+
+.t-head {
+  font-size: 23px;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+
+.detail li{
+  color: beige;
+  padding-top: 23px;
+  font-weight: 500;
+  font-size: 17px;
+  list-style: none;
+}
+
+.copy {
+  background-color: rgba(0, 0, 0, 0.906);
+  height: 20px;
+  padding: 40px;
+  text-align: center;
+}
+
+.copy span{
+  color: white;
+  font-size: 20px;
+
+}
+
+.line{
+  height: 0.1px;
+  width: 100%;
+  background-color: rgba(198, 155, 198, 0.546);
+}
+
+.detail p{
+  color: beige;
+  padding-top: 10px;
+  font-weight: lighter;
+  font-size: 20px;
 }
