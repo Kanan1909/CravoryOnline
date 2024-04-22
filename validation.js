@@ -78,3 +78,14 @@ function showForm(form) {
 function hideForm(form) {
     form.style.display = "none";
 }
+
+function validateForm() {
+    var form = document.querySelector('.booking-form');
+    if (form.checkValidity()) {
+        window.location.href = 'cart.html'; // Redirects to cart.html if form is valid
+        return false; // Prevents the default form submission
+    } else {
+        form.reportValidity(); // Triggers the browser's built-in form validation messages
+        return false; // Prevents the default form submission
+    }
+}
