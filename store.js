@@ -1,10 +1,11 @@
-function addToCart(product, price, quantity) {
-    const productDetails = {
-      name: product,
-      price: parseFloat(price),
-      quantity: parseInt(quantity),
-    };
-  
-    // Save the productDetails object in session storage
-    sessionStorage.setItem(product, JSON.stringify(productDetails));
+// Function to update the item count in the cart icon
+function updateCartItemCount() {
+    const cartItemCount = Object.keys(getCartItems()).length;
+    document.getElementById('cart-item-count').innerText = cartItemCount;
   }
+  
+  // Call updateCartItemCount function when the DOM content is loaded
+  document.addEventListener('DOMContentLoaded', () => {
+    updateCartItemCount();
+  });
+  

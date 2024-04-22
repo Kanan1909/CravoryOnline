@@ -10,12 +10,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
   <style>
     .popup-container {
         position: fixed;
-        top: 20%;
-        left: 80%;
+        top: 25%;
+        left: 82%;
         transform: translate(-50%, -50%);
         background-color: #f9f9f9;
         padding: 30px;
@@ -24,21 +25,30 @@
         z-index: 1000;
         display: none;
         width: 80%;
-        max-width: 700px;
-        height: 300px;
+        max-width: 600px;
+        height: 380px;
+        /* border-radius: 30%; */
         text-align: center;
-        background-image: url('images/logo/popup2.jpg');
+        justify-content: center;
+        background-color: rgb(103, 8, 8);
+        background-image: linear-gradient(rgba(196, 180, 180, 0.7), rgba(160, 144, 144, 0.7)),url('images/logo/popup3.jpg');
+        background-position: center;
+        opacity: 1;
         background-repeat: no-repeat;
         background-size: cover;
-        font-size: 23px;
+        font-size: 33px;
+        font-weight: 350;
         color: black;
     }
 
     .popup-content {
+       display: flex;
+       padding-top:110px ;
+        justify-content: center;
         text-align: center;
         color: black;
         font-weight: bolder;
-        font-size: 23px;
+        font-size: 35px;
     }
 
     .popup-close {
@@ -53,34 +63,33 @@
     .popup-content h2 {
         margin-bottom: 20px;
         font-size: 40px;
-        color: #fdfdfd;
+        color: rgb(91, 14, 14);
     }
 
     .popup-content p {
-        font-size: 23px;
-        color: #f0f0f0;
+      font-size: 35px;
+        color: rgba(78, 11, 11, 0.633);
         margin-bottom: 15px;
+        text-align: center;
+        justify-content: center;
+        padding-left: 70px;
+        padding-right: 70px;
+        font-family: "Work Sans";
     }
 </style>
   
 <script>
   // Array containing different popup messages
   var popupMessages = [
-      { heading: "Just to make your day lighter!", message: "Life update - cookie mein choco chip se zyada responsibilities hai, but this is not the case with Cravory" },
-      { heading: "Just to make your day lighter!", message: "Your order for a love life is running late by a few years, so meanwhile have a cheesecake" },
-      { heading: "Just to make your day lighter!", message: "history banane ki umar mein , order history bana raha hu" },
-      { heading: "No offense!", message: "all I need in life is more snacks then snakes" },
-      { heading: "Just to make your day lighter!", message: "if you don't like coffee then try again, Cravory will make you fall in love with it" },
-      { heading: "Just to make your day lighter!", message: "to all the people who order a cake on 14th Feb but haven't today, sharam nahi aati?" },
-      { heading: "Just to make your day lighter!", message: "Monday motivation is out of stock, so have a coffee and bounce back!" },
-      { heading: "Just to make your day lighter!", message: "Aaj kiya khane ka maan hai? mithaas mangoge , mithaas denge" },
-      { heading: "No offense!", message: "all I need in life is more snacks then snakes" },
-
-      // { heading: "Explore our delicious offerings!", message: "Where Every Bite Tells a Story." },
-      // { heading: "Join us for a sweet experience!", message: "Crafting Memories, One Treat at a Time." },
-      // { heading: "Baking Happiness Daily!", message: "From Our Oven to Your Heart." },
-      // { heading: "Where Flour, Butter, and Love Converge.", message: "Satisfying Cravings, Sparking Smiles." },
-      
+      { heading: "", message: "Life update - cookie mein choco chip se zyada responsibilities hai, but this is not the case with Cravory" },
+      { heading: "", message: "Your order for a love life is running late by a few years, so meanwhile have a cheesecake" },
+      { heading: "", message: "history banane ki umar mein , order history bana raha hu" },
+      { heading: "", message: "all I need in life is more snacks then snakes" },
+      { heading: "", message: "if you don't like coffee then try again, Cravory will make you fall in love with it" },
+      { heading: "", message: "to all the people who order a cake on 14th Feb but haven't today, sharam nahi aati?" },
+      { heading: "", message: "Monday motivation is out of stock, so have a coffee and bounce back!" },
+      { heading: "", message: "Aaj kiya khane ka maan hai? mithaas mangoge , mithaas denge" },
+      { heading: "", message: "all I need in life is more snacks then snakes" },
   ];
 
   // Function to display a random popup
@@ -99,6 +108,7 @@
 
   // Call the displayRandomPopup function when the page loads
   window.onload = displayRandomPopup;
+
 </script>
 
 </head>
@@ -109,8 +119,8 @@
     <span class="popup-close" onclick="closePopup()">&times;</span>
     <div class="popup-content">
         <h2 id="popup-heading">Welcome to our Cravory!</h2>
-        <p id="popup-message">Taste the Difference, Feel the Warmth.</p>
-        <!-- <p>Indulge in the joy of homemade goodness!</p> -->
+        <p id="popup-message" >Taste the Difference, Feel the Warmth.</p>
+        
     </div>
 </div>
 
